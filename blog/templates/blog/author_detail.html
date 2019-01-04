@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>Blogger:{{ author.blogger_name }}</h1>
+    <h3>Introduction:</h3>
+    {% if author.blogger_introduce %}
+        <p>{{ author.blogger_introduce }}</p>
+    {% else %}
+        <p>He is too lazy to write somethings</p>
+    {% endif %}
+    <h3>Blogs:</h3>
+    {% for blog in author.blog_set.all %}
+        <li><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a>({{ blog.blog_write_time }}) </li>
+    {% endfor %}
+{% endblock %}

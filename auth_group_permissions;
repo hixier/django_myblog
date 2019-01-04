@@ -1,0 +1,6 @@
+auth_group_permissions      blog_blog                 
+auth_permission             blog_comment              
+auth_user                   django_admin_log          
+auth_user_groups            django_content_type       
+auth_user_user_permissions  django_migrations         
+blog_author                 django_session            
